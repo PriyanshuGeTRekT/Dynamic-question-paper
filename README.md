@@ -1,14 +1,24 @@
 # Dynamic Question Paper Generator API
 
-Start the server:
+A backend API built with Node.js, Express and SQLite that generates question papers
+based on total marks, selected topics and difficulty distribution.
 
-1. npm install
-2. npm run dev
+## Features
+- User registration & login (JWT + bcrypt)
+- Question bank with metadata: topic, difficulty, marks
+- Generate question papers: POST /api/papers/generate
+- SQLite DB auto-created in backend folder
 
-Register -> Login -> Add questions -> Generate paper
+## Quick start
+1. cd backend
+2. npm install
+3. npm run dev
 
-Endpoints:
+## Endpoints
 - POST /api/auth/register
 - POST /api/auth/login
-- POST /api/questions
-- POST /api/papers/generate
+- POST /api/questions (Auth required)
+- POST /api/papers/generate (Auth required)
+
+## Notes
+- Do not commit `.env` or the SQLite DB file
